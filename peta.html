@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <title>Tiny Dashboard - A Bootstrap Dashboard Template</title>
+  <!-- Simple bar CSS -->
+  <link rel="stylesheet" href="css/simplebar.css">
+  <!-- Fonts CSS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Icons CSS -->
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.css" />
+  <link rel="stylesheet" href="fontawesome/css/brands.css" />
+  <link rel="stylesheet" href="fontawesome/css/solid.css" />
+  <link rel="stylesheet" href="fontawesome/css/regular.css" />
+  <link rel="stylesheet" href="css/feather.css">
+
+  <!-- <link rel="stylesheet" href="css/dropzone.css"> -->
+  <!-- <link rel="stylesheet" href="css/uppy.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/jquery.steps.css"> -->
+  <!-- <link rel="stylesheet" href="css/jquery.timepicker.css"> -->
+  <!-- <link rel="stylesheet" href="css/quill.snow.css"> -->
+  <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="css/dataTables.checkboxes.css">
+  <!-- Date Range Picker CSS -->
+  <link rel="stylesheet" href="css/daterangepicker.css">
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
+  <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="vertical  light  ">
+  <div class="wrapper">
+    <nav class="topnav navbar fixed-top bg-white">
+      <button type="button" class="navbar-toggler mt-2 p-0 mr-3 collapseSidebar">
+        <i class="fe fe-menu navbar-toggler-icon"></i>
+      </button>
+      <!-- <form class="form-inline mr-auto searchform text-muted">
+          <input class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted" type="search" placeholder="Type something..." aria-label="Search">
+        </form> -->
+      <ul class="nav ml-auto">
+        <!-- <li class="nav-item">
+            <a class="nav-link text-muted my-2" href="#" id="modeSwitcher" data-mode="light">
+              <i class="fe fe-sun fe-16"></i>
+            </a>
+          </li> -->
+        <li class="nav-item">
+          <a class="btn bg-light text-muted my-2 p-2" href="./#">
+            <span class="fa fa-gear d-block"></span>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-shortcut">
+            <span class="fe fe-grid fe-16"></span>
+          </a>
+        </li>
+        <li class="nav-item nav-notif">
+          <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-notif">
+            <span class="fe fe-bell fe-16"></span>
+            <span class="dot dot-md bg-success"></span>
+          </a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link text-muted pr-2" href="#" role="button">
+            <span class="avatar avatar-sm mt-2">
+              <img src="./assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded">
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
+      <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
+        <i class="fe fe-x"><span class="sr-only"></span></i>
+      </a>
+      <nav class="vertnav navbar navbar-light">
+        <!-- nav bar -->
+        <div class="w-100 mb-4 d-flex">
+          <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
+            <img src="assets/images/logo.svg" alt="">
+          </a>
+        </div>
+        <ul class="navbar-nav flex-fill w-100 mb-2">
+          <li class="nav-item dropdown">
+            <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+              <i class="fe fe-home fe-16"></i>
+              <span class="ml-3 item-text">Dashboard</span><span class="sr-only">(current)</span>
+            </a>
+            <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
+              <li class="nav-item active">
+                <a class="nav-link pl-3" href="./index.html"><span class="ml-1 item-text">Default</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./dashboard-analytics.html"><span
+                    class="ml-1 item-text">Analytics</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./dashboard-sales.html"><span
+                    class="ml-1 item-text">E-commerce</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./dashboard-saas.html"><span class="ml-1 item-text">Saas
+                    Dashboard</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./dashboard-system.html"><span class="ml-1 item-text">Systems</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="text-muted nav-heading mt-4 mb-1">
+          <span>Components</span>
+        </p>
+        <ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
+          <li class="nav-item w-100 active">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-columns fe-16"></i>
+              <span class="ml-3 item-text">Dashboard</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-columns fe-16"></i>
+              <span class="ml-3 item-text">Kontrak Final</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-check-square"></i>
+              <span class="ml-3 item-text">Persetujuan</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-user"></i>
+              <span class="ml-3 item-text">User Management</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-globe"></i>
+              <span class="ml-3 item-text">Jalan</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-map-pin"></i>
+              <span class="ml-3 item-text">Titik Lokasi</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-map"></i>
+              <span class="ml-3 item-text">Peta</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-clipboard"></i>
+              <span class="ml-3 item-text">Log Aktifitas</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span class="ml-3 item-text">Whatsapp Blast</span>
+            </a>
+          </li>
+        </ul>
+        <!-- <ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
+          <li class="nav-item dropdown">
+            <a href="#ui-elements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+              <i class="fe fe-box fe-16"></i>
+              <span class="ml-3 item-text">UI elements</span>
+            </a>
+            <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./ui-color.html"><span class="ml-1 item-text">Colors</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./ui-typograpy.html"><span class="ml-1 item-text">Typograpy</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./ui-icons.html"><span class="ml-1 item-text">Icons</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul> -->
+        <div class="btn-box w-100 mb-1 text-center" style="margin-top:110%;">
+          <a href="" class="btn btn-light p-3 rounded-2">
+            <i class="fe fe-power fe-24"></i>
+          </a>
+          <!--  <a href="https://themeforest.net/item/tinydash-bootstrap-html-admin-dashboard-template/27511269"
+            target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">Buy now</span>
+          </a> -->
+        </div>
+      </nav>
+    </aside>
+    <main role="main" class="main-content" style="margin-top: 65px;">
+      <div class="card bg-primary">
+      </div> <!-- .container-fluid -->
+    </main> <!-- main -->
+  </div> <!-- .wrapper -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/simplebar.min.js"></script>
+  <script src='js/daterangepicker.js'></script>
+  <script src='js/jquery.stickOnScroll.js'></script>
+  <script src="js/tinycolor-min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/apps.js"></script>
+  <!-- <script src="js/d3.min.js"></script> -->
+  <script src='js/jquery.dataTables.min.js'></script>
+  <script src='js/dataTables.bootstrap4.min.js'></script>
+  <script src='js/dataTables.checkboxes.min.js'></script>
+  <script src='js/dataTables.buttons.min.js'></script>
+
+  <script>
+
+    $('#dataTable-1').DataTable({
+      dom: '<"top">t<"bottom bg-light rounded-2 d-flex justify-content-between align-items-center px-2"Bp <"px-1"l>><"clear">',
+      paging: true,
+      pagingType: "simple_numbers",
+      ordering: true,
+      info: false,
+      "order": [[1, 'asc']],
+      "lengthMenu": [
+        [3, 5, 10, -1],
+        [3, 5, 10, "All"]
+      ],
+      'columnDefs': [{
+        'targets': 0,
+        'checkboxes': {
+          'selectRow': true
+        }
+      }, {
+        'targets': 12,
+        'orderable': false
+      }
+      ],
+      buttons: [
+        {
+          text: '<i class="fa fa-trash"></i>&nbsp; Hapus',
+          className: 'btn btn-sm rounded-2 btn-light'
+        },
+        {
+          text: '<i class="fa fa-trash"></i>&nbsp; Download ID Card',
+          className: 'btn btn-sm rounded-2 btn-light'
+        },
+        {
+          text: '<i class="fa fa-trash"></i>&nbsp; Download Dokumen Kontrak',
+          className: 'btn btn-sm rounded-2 btn-light'
+        }
+      ]
+    });
+
+  </script>
+
+</body>
+
+</html>

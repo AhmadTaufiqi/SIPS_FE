@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <title>Tiny Dashboard - A Bootstrap Dashboard Template</title>
+  <!-- Simple bar CSS -->
+  <link rel="stylesheet" href="css/simplebar.css">
+  <!-- Fonts CSS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Icons CSS -->
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.css" />
+  <link rel="stylesheet" href="fontawesome/css/brands.css" />
+  <link rel="stylesheet" href="fontawesome/css/solid.css" />
+  <link rel="stylesheet" href="fontawesome/css/regular.css" />
+  <link rel="stylesheet" href="css/feather.css">
+
+  <link rel="stylesheet" href="css/select2.css">
+  <link rel="stylesheet" href="css/dropzone.css">
+  <link rel="stylesheet" href="css/uppy.min.css">
+  <link rel="stylesheet" href="css/jquery.steps.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/quill.snow.css">
+  <!-- Date Range Picker CSS -->
+  <link rel="stylesheet" href="css/daterangepicker.css">
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
+  <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="vertical  light  ">
+  <div class="wrapper">
+    <nav class="topnav navbar fixed-top bg-white">
+      <button type="button" class="navbar-toggler mt-2 p-0 mr-3 collapseSidebar">
+        <i class="fe fe-menu navbar-toggler-icon"></i>
+      </button>
+      <!-- <form class="form-inline mr-auto searchform text-muted">
+          <input class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted" type="search" placeholder="Type something..." aria-label="Search">
+        </form> -->
+      <ul class="nav ml-auto">
+        <!-- <li class="nav-item">
+            <a class="nav-link text-muted my-2" href="#" id="modeSwitcher" data-mode="light">
+              <i class="fe fe-sun fe-16"></i>
+            </a>
+          </li> -->
+        <li class="nav-item">
+          <a class="btn bg-light text-muted my-2 p-2" href="./#">
+            <span class="fa fa-gear d-block"></span>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-shortcut">
+            <span class="fe fe-grid fe-16"></span>
+          </a>
+        </li>
+        <li class="nav-item nav-notif">
+          <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-notif">
+            <span class="fe fe-bell fe-16"></span>
+            <span class="dot dot-md bg-success"></span>
+          </a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link text-muted pr-2" href="#" role="button">
+            <span class="avatar avatar-sm mt-2">
+              <img src="./assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded">
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
+      <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
+        <i class="fe fe-x"><span class="sr-only"></span></i>
+      </a>
+      <nav class="vertnav navbar navbar-light">
+        <!-- nav bar -->
+        <div class="w-100 mb-4 d-flex">
+          <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
+            <svg version="1.1" id="logo" class="navbar-brand-img brand-sm" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
+              <g>
+                <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
+                <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
+                <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
+              </g>
+            </svg>
+          </a>
+        </div>
+        <ul class="navbar-nav flex-fill w-100 mb-2">
+          <li class="nav-item dropdown">
+            <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+              <i class="fe fe-home fe-16"></i>
+              <span class="ml-3 item-text">Dashboard</span><span class="sr-only">(current)</span>
+            </a>
+            <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
+              <li class="nav-item active">
+                <a class="nav-link pl-3" href="./index.html"><span class="ml-1 item-text">Default</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./dashboard-analytics.html"><span
+                    class="ml-1 item-text">Analytics</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./dashboard-sales.html"><span
+                    class="ml-1 item-text">E-commerce</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./dashboard-saas.html"><span class="ml-1 item-text">Saas
+                    Dashboard</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./dashboard-system.html"><span class="ml-1 item-text">Systems</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="text-muted nav-heading mt-4 mb-1">
+          <span>Components</span>
+        </p>
+        <ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
+          <li class="nav-item w-100 active">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-columns fe-16"></i>
+              <span class="ml-3 item-text">Dashboard</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-columns fe-16"></i>
+              <span class="ml-3 item-text">Kontrak Final</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-check-square"></i>
+              <span class="ml-3 item-text">Persetujuan</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-user"></i>
+              <span class="ml-3 item-text">User Management</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-globe"></i>
+              <span class="ml-3 item-text">Jalan</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-map-pin"></i>
+              <span class="ml-3 item-text">Titik Lokasi</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-map"></i>
+              <span class="ml-3 item-text">Peta</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fe fe-clipboard"></i>
+              <span class="ml-3 item-text">Log Aktifitas</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="widgets.html">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span class="ml-3 item-text">Whatsapp Blast</span>
+            </a>
+          </li>
+        </ul>
+        <!-- <ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
+          <li class="nav-item dropdown">
+            <a href="#ui-elements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+              <i class="fe fe-box fe-16"></i>
+              <span class="ml-3 item-text">UI elements</span>
+            </a>
+            <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./ui-color.html"><span class="ml-1 item-text">Colors</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./ui-typograpy.html"><span class="ml-1 item-text">Typograpy</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-3" href="./ui-icons.html"><span class="ml-1 item-text">Icons</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul> -->
+        <div class="btn-box w-100 mb-1 text-center" style="margin-top:110%;">
+          <a href="" class="btn btn-light p-3 rounded-2">
+            <i class="fe fe-power fe-24"></i>
+          </a>
+         <!--  <a href="https://themeforest.net/item/tinydash-bootstrap-html-admin-dashboard-template/27511269"
+            target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
+            <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">Buy now</span>
+          </a> -->
+        </div>
+      </nav>
+    </aside>
+    <main role="main" class="main-content" style="margin-top: 65px;">
+      <div class="container-fluid">
+        <!-- widgets -->
+        <div class="row">
+          <div class="col-md-6 col-xl-2 mb-4 widget">
+            <div class="card shadow">
+              <div class="card-body p-1-2">
+                <p class="widget-title">Total</p>
+                <small class="widget-title-detail">Juru Parkir</small>
+                <div class="row px-2">
+                  <div class="col text-center">
+                    <div class="widget-icon align-middle bg-primary text-light">
+                      <!-- <span> -->
+                      <i class="fe fe-user fe-24"></i>
+                      <!-- </span> -->
+                    </div>
+                  </div>
+                  <div class="col-8 widget-count">
+                    <h3 class="text-primary">3300</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-2 mb-4 widget">
+            <div class="card shadow">
+              <div class="card-body p-1-2">
+                <p class="widget-title">Total</p>
+                <small class="widget-title-detail">Juru Parkir Aktif</small>
+                <div class="row px-2">
+                  <div class="col text-center">
+                    <div class="widget-icon align-middle bg-primary text-light">
+                      <!-- <span> -->
+                      <i class="fe fe-user fe-24"></i>
+                      <!-- </span> -->
+                    </div>
+                  </div>
+                  <div class="col-8 widget-count">
+                    <h3 class="text-primary">3300</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-2 mb-4 widget">
+            <div class="card shadow">
+              <div class="card-body p-1-2">
+                <p class="widget-title">Total</p>
+                <small class="widget-title-detail">Juru Parkir Tidak Aktif</small>
+                <div class="row px-2">
+                  <div class="col text-center">
+                    <div class="widget-icon align-middle bg-primary text-light">
+                      <!-- <span> -->
+                      <i class="fe fe-user fe-24"></i>
+                      <!-- </span> -->
+                    </div>
+                  </div>
+                  <div class="col-8 widget-count">
+                    <h3 class="text-primary">3300</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-2 mb-4 widget">
+            <div class="card shadow">
+              <div class="card-body p-1-2">
+                <p class="widget-title">Kontrak Jukir Akan Berakhir</p>
+                <small class="widget-title-detail">Dalam 1 Bulan</small>
+                <div class="row px-2">
+                  <div class="col text-center">
+                    <div class="widget-icon align-middle bg-primary text-light">
+                      <!-- <span> -->
+                      <i class="fe fe-user fe-24"></i>
+                      <!-- </span> -->
+                    </div>
+                  </div>
+                  <div class="col-8 widget-count">
+                    <h3 class="text-primary">3300</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-2 mb-4 widget">
+            <div class="card shadow">
+              <div class="card-body p-1-2">
+                <p class="widget-title">Total</p>
+                <small class="widget-title-detail">Kontrak Disetujui</small>
+                <div class="row px-2">
+                  <div class="col text-center">
+                    <div class="widget-icon align-middle bg-primary text-light">
+                      <!-- <span> -->
+                      <i class="fe fe-user fe-24"></i>
+                      <!-- </span> -->
+                    </div>
+                  </div>
+                  <div class="col-8 widget-count">
+                    <h3 class="text-primary">3300</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-2 mb-4 widget">
+            <div class="card shadow">
+              <div class="card-body p-1-2">
+                <p class="widget-title">Total</p>
+                <small class="widget-title-detail">Disetujui</small>
+                <div class="row px-2">
+                  <div class="col text-center">
+                    <div class="widget-icon align-middle bg-primary text-light">
+                      <!-- <span> -->
+                      <i class="fe fe-user fe-24"></i>
+                      <!-- </span> -->
+                    </div>
+                  </div>
+                  <div class="col-8 widget-count">
+                    <h3 class="text-primary">3300</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end widgets -->
+
+        <div class="row">
+          <div class="col">
+            <div class="mb-2">
+              <div class="subcontent-heading">
+                <div class="d-flex align-items-center" style="height:28px;">
+                  <div class="dot-heading mr-2">
+                  </div>
+                  <span class="subcontent-title mr-auto">
+                    Finansial/<small class="text-muted">Tahun</small>
+                  </span>
+                  <a href="#" class="text-muted small" id="hide_target">show/hide <i class="fe fe-eye"></i></a>
+                </div>
+              </div>
+              <div class="card bg-primary">
+                <div class="card-body">
+                  <h6 class="text-light mb-3 font-weight-normal"><i class="fa fa-bullseye"></i> Target</h6>
+                  <h3 class="mb-0 text-light">Rp . . .</h3>
+                </div>
+              </div>
+              <div class="row p-2">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body d-flex flex-column p-1-2">
+                      <div class="bg-light users_icon_widget mb-2">
+                        <i class="text-warning fe fe-users fe-16"></i>
+                      </div>
+                      <span>Khusus</span>
+                      <b>Rp . . .</b>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body d-flex flex-column p-1-2">
+                      <div class="bg-light users_icon_widget mb-2">
+                        <i class="text-purple fe fe-users fe-16"></i>
+                      </div>
+                      <span>Khusus</span>
+                      <b>Rp . . .</b>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body d-flex flex-column p-1-2">
+                      <div class="bg-light users_icon_widget mb-2">
+                        <i class="text-green fe fe-users fe-16"></i>
+                      </div>
+                      <span>Khusus</span>
+                      <b>Rp . . .</b>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-2">
+              <div class="subcontent-heading">
+                <div class="d-flex align-items-center">
+                  <div class="dot-heading mr-2">
+                  </div>
+                  <span class="subcontent-title mr-auto">
+                    Log Aktifitas
+                  </span>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body p-2">
+                  <div class="d-flex m-2">
+                    <div class="icon-log-activity bg-light">
+                      <i class="fe fe-file-text fe-16"></i>
+                    </div>
+                    <div class="d-block align-self-center">
+                      <p class="text-muted small mb-2">today</p>
+                      <strong>Jum 24 Mar</strong>
+                    </div>
+                  </div>
+                  <div class="d-flex p-1 rounded-2 bg-light mb-2 align-items-center">
+                    <div class="rounded-circle p-1 bg-white">
+                      <i class="fas fa-arrow-left d-block"></i>
+                    </div>
+                    <span class="small mx-auto">Jum, 24 mar</span>
+                    <div class="rounded-circle p-1 bg-white">
+                      <i class="fas fa-arrow-right d-block"></i>
+                    </div>
+                  </div>
+                  <div class="bg-light rounded-1 px-2">
+                    <div class="list-group list-group-flush">
+                      <div class="list-group-item bg-none">
+                        <div class="row align-items-center">
+                          <div class="col-3 col-md-2">
+                            <img src="./assets/products/p1.jpg" alt="..." class="thumbnail-sm">
+                          </div>
+                          <div class="col">
+                            <strong>Satrio Adib</strong>
+                            <div class="my-0 text-muted small">mengakses website</div>
+                          </div>
+                          <div class="col-auto align-items-bottom">
+                            <small>12:00</small>
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item bg-none">
+                        <div class="row align-items-center">
+                          <div class="col-3 col-md-2">
+                            <img src="./assets/products/p1.jpg" alt="..." class="thumbnail-sm">
+                          </div>
+                          <div class="col">
+                            <strong>Satrio Adib</strong>
+                            <div class="my-0 text-muted small">mengakses website</div>
+                          </div>
+                          <div class="col-auto align-items-bottom">
+                            <small>12:00</small>
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item bg-none">
+                        <div class="row align-items-center">
+                          <div class="col-3 col-md-2">
+                            <img src="./assets/products/p1.jpg" alt="..." class="thumbnail-sm">
+                          </div>
+                          <div class="col">
+                            <strong>Satrio Adib</strong>
+                            <div class="my-0 text-muted small">mengakses website</div>
+                          </div>
+                          <div class="col-auto align-items-bottom">
+                            <small>12:00</small>
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item bg-none">
+                        <div class="row align-items-center">
+                          <div class="col-3 col-md-2">
+                            <img src="./assets/products/p1.jpg" alt="..." class="thumbnail-sm">
+                          </div>
+                          <div class="col">
+                            <strong>Satrio Adib</strong>
+                            <div class="my-0 text-muted small">mengakses website</div>
+                          </div>
+                          <div class="col-auto align-items-bottom">
+                            <small>12:00</small>
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item bg-none">
+                        <div class="row align-items-center">
+                          <div class="col-3 col-md-2">
+                            <img src="./assets/products/p1.jpg" alt="..." class="thumbnail-sm">
+                          </div>
+                          <div class="col">
+                            <strong>Satrio Adib</strong>
+                            <div class="my-0 text-muted small">mengakses website</div>
+                          </div>
+                          <div class="col-auto align-items-bottom">
+                            <small>12:00</small>
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-8">
+            <div class="subcontent-heading">
+              <div class="d-flex align-items-center">
+                <div class="dot-heading mr-2">
+                </div>
+                <span class="subcontent-title mr-auto">
+                  Log Aktifitas
+                </span>
+                <div class="form-inline searchform-2 w-25">
+                  <input type="search" class="form-search bg-none mr-2" id="search_lokasi" name="search_lokasi"
+                    aria-label="Search">
+                </div>
+                <select name="filter_status" id="filter_status" class="form-control form-control-sm rounded-2 w-25">
+                  <option value="aktif">Tampilkan Semua Status</option>
+                  <option value="aktif">Aktif <span class="text-muted">=< 2 Tahun</span>
+                  </option>
+                  <option value="tidak aktif">Tidak Aktif</option>
+                  <option value="1 bulan">Masa Kontrak Akan Berakhir<span class="text-muted">(Dalam 1 Bulan)</span>
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="card maps-section mb-3">
+              <div class="card-body" style="overflow: hidden;">
+                <!-- <img src="assets/images/56-1.jpg" alt=""> -->
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="status-kontrak">
+                <div class="dot-status"></div>
+                <span class="text-status">Aktif</span>
+              </div>
+              <div class="status-kontrak">
+                <div class="dot-status bg-warning"></div>
+                <span class="text-status">Akan berakhir dalam 1 bulan</span>
+              </div>
+              <div class="status-kontrak">
+                <div class="dot-status bg-danger"></div>
+                <span class="text-status">Tidak Aktif</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- .container-fluid -->
+
+      <div class="modal fade modal-notif modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="defaultModalLabel">Notifications</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="list-group list-group-flush my-n3">
+                <div class="list-group-item bg-transparent">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <span class="fe fe-box fe-24"></span>
+                    </div>
+                    <div class="col">
+                      <small><strong>Package has uploaded successfull</strong></small>
+                      <div class="my-0 text-muted small">Package is zipped and uploaded</div>
+                      <small class="badge badge-pill badge-light text-muted">1m ago</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item bg-transparent">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <span class="fe fe-download fe-24"></span>
+                    </div>
+                    <div class="col">
+                      <small><strong>Widgets are updated successfull</strong></small>
+                      <div class="my-0 text-muted small">Just create new layout Index, form, table</div>
+                      <small class="badge badge-pill badge-light text-muted">2m ago</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item bg-transparent">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <span class="fe fe-inbox fe-24"></span>
+                    </div>
+                    <div class="col">
+                      <small><strong>Notifications have been sent</strong></small>
+                      <div class="my-0 text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
+                      <small class="badge badge-pill badge-light text-muted">30m ago</small>
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <div class="list-group-item bg-transparent">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <span class="fe fe-link fe-24"></span>
+                    </div>
+                    <div class="col">
+                      <small><strong>Link was attached to menu</strong></small>
+                      <div class="my-0 text-muted small">New layout has been attached to the menu</div>
+                      <small class="badge badge-pill badge-light text-muted">1h ago</small>
+                    </div>
+                  </div>
+                </div> <!-- / .row -->
+              </div> <!-- / .list-group -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Clear All</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade modal-shortcut modal-slide" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="defaultModalLabel">Shortcuts</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body px-5">
+              <div class="row align-items-center">
+                <div class="col-6 text-center">
+                  <div class="squircle bg-success justify-content-center">
+                    <i class="fe fe-cpu fe-32 align-self-center text-white"></i>
+                  </div>
+                  <p>Control area</p>
+                </div>
+                <div class="col-6 text-center">
+                  <div class="squircle bg-primary justify-content-center">
+                    <i class="fe fe-activity fe-32 align-self-center text-white"></i>
+                  </div>
+                  <p>Activity</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-6 text-center">
+                  <div class="squircle bg-primary justify-content-center">
+                    <i class="fe fe-droplet fe-32 align-self-center text-white"></i>
+                  </div>
+                  <p>Droplet</p>
+                </div>
+                <div class="col-6 text-center">
+                  <div class="squircle bg-primary justify-content-center">
+                    <i class="fe fe-upload-cloud fe-32 align-self-center text-white"></i>
+                  </div>
+                  <p>Upload</p>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-6 text-center">
+                  <div class="squircle bg-primary justify-content-center">
+                    <i class="fe fe-users fe-32 align-self-center text-white"></i>
+                  </div>
+                  <p>Users</p>
+                </div>
+                <div class="col-6 text-center">
+                  <div class="squircle bg-primary justify-content-center">
+                    <i class="fe fe-settings fe-32 align-self-center text-white"></i>
+                  </div>
+                  <p>Settings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main> <!-- main -->
+  </div> <!-- .wrapper -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/simplebar.min.js"></script>
+  <script src='js/daterangepicker.js'></script>
+  <script src='js/jquery.stickOnScroll.js'></script>
+  <script src="js/tinycolor-min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/apps.js"></script>
+  <!-- <script src="js/d3.min.js"></script> -->
+  <script src='js/jquery.dataTables.min.js'></script>
+  <script src='js/dataTables.bootstrap4.min.js'></script>
+  <script src='js/dataTables.checkboxes.min.js'></script>
+  <script src='js/dataTables.buttons.min.js'></script>
+
+  <script>
+
+</body>
+
+</html>
