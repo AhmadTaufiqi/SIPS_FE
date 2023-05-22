@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <title>SIPSS | Tambah User Admin</title>
+  <!-- Simple bar CSS -->
+  <link rel="stylesheet" href="css/simplebar.css">
+  <!-- Fonts CSS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Icons CSS -->
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="fontawesome/css/solid.css">
+  <link rel="stylesheet" href="fontawesome/css/brands.css">
+  <link rel="stylesheet" href="fontawesome/css/regular.css">
+  <link rel="stylesheet" href="css/feather.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="css/dataTables.checkboxes.css">
+
+  <!-- Date Range Picker CSS -->
+  <link rel="stylesheet" href="css/daterangepicker.css">
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
+  <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="vertical  light">
+  <div class="wrapper">
+    <nav class="topnav navbar navbar-light">
+      <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
+        <i class="fe fe-menu navbar-toggler-icon"></i>
+      </button>
+      <div class="card brand-label"
+        style="height: 53px; border-radius: 16px; border: none; background-color:  #E7E7E7;">
+      </div>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link text-muted my-2" href="#">
+            <span class="iconify" data-icon="ant-design:setting-outlined" data-width="24px"></span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-muted pr-0" href="#" id="navbarDropdownMenuLink" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="avatar avatar-sm mt-2">
+              <img src="./assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded">
+            </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <a class="dropdown-item" href="#">Activities</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- sidebar start -->
+    <aside class="sidebar02 sidebar-left border-right" id="leftSidebar" style="background-color: transparent;"
+      data-simplebar>
+      <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
+        <i class="fe fe-x"><span class="sr-only"></span></i>
+      </a>
+      <nav class="vertnav navbar navbar-light">
+        <!-- nav bar -->
+        <div class="w-100 mb-4 d-flex">
+          <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="#">
+            <img src="assets/images/logo.svg" alt="">
+          </a>
+        </div>
+        <ul class="navbar-nav flex-fill w-100 mb-2">
+          <li class="nav-item ">
+            <a href="#" class="nav-link">
+              <span class="iconify" data-icon="akar-icons:dashboard" data-rotate="90deg" data-width="24"></span>
+              <span class="ml-3 item-text">Dashboard</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-fill w-100 mb-2">
+          <li class="nav-item ">
+            <a href="si-kontrak-final.html" class="nav-link">
+              <span class="iconify" data-icon="material-symbols:edit-document-outline" data-width="24"></span>
+              <span class="ml-3 item-text">Kontrak Final</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a class="nav-link" href="#">
+              <span class="iconify" data-icon="mdi:calendar-check" data-width="24"></span>
+              <span class="ml-3 item-text">Persetujuan</span>
+            </a>
+          </li>
+          <li class="nav-item w-100 active">
+            <a href="si-user-management.html" class="nav-link">
+              <span class="iconify" data-icon="ri:user-3-line" data-width="24"></span>
+              <span class="ml-3 item-text">User Management</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a href="#" class="nav-link">
+              <span class="iconify" data-icon="icon-park:world" data-width="24"></span>
+              <span class="ml-3 item-text">Jalan</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a href="#" class="nav-link">
+              <span class="iconify" data-icon="ri:map-pin-2-line" data-width="24"></span>
+              <span class="ml-3 item-text">Titik Lokasi</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a href="#" class="nav-link">
+              <span class="iconify" data-icon="material-symbols:map-outline-sharp" data-width="24"></span>
+              <span class="ml-3 item-text">Peta</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a href="#" class="nav-link">
+              <span class="iconify" data-icon="icon-park-outline:log" data-width="24"></span>
+              <span class="ml-3 item-text">Log Aktivitas</span>
+            </a>
+          </li>
+          <li class="nav-item w-100">
+            <a href="#" class="nav-link">
+              <span class="iconify" data-icon="ic:baseline-whatsapp" data-width="24"></span>
+              <span class="ml-3 item-text">Whatsapp Blast</span>
+            </a>
+          </li>
+          <li class="nav-item w-100 mt-5">
+            <a href="#" class="btn btn-lg btn-light" style="border-radius: 24px;">
+              <span class="iconify" data-icon="bx:log-out-circle" data-width="32"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- sidebar end -->
+    <main role="main" class="main-content">
+      <div class="container-fluid">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-tittle">Tambah User Admin</h3>
+              <div class="col-12">
+                <label for="form-group" style="font-weight: bolder;">Upload Foto Profile</label>
+                <div class="profile-pic-div">
+                  <img src="assets/images/image.png" id="photo">
+                  <input type="file" id="file" max="2000" onchange="checkImageResolution()" accept=".jpg,.jpeg,.png"
+                    required>
+                  <label for="file" id="uploadBtn">Pilih Foto</label>
+                </div>
+              </div>
+              <ul class="mt-4 mr-3" style="font-size: 12px;">
+                <li>Resolution max 800 x 600</li>
+                <li>Maks. ukuran file 2.0 mb</li>
+                <li>Format foto yang diizinkan: JPG, JPEG, PNG</li>
+              </ul>
+
+              <div class="col-12">
+                <form>
+                  <div class="form-group row">
+                    <label for="inpNama" class="col-sm-3 col-form-label" style="font-weight: bolder;">Nama Lengkap <span
+                        style="color: red;">*</span></label>
+                    <div class="col-sm-9">
+                      <input type="text" name="inpNama" class="form-control input-text" id="inpNama"
+                        placeholder="Nama Lengkap" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inpWA" class="col-sm-3 col-form-label" style="font-weight: bolder;">Nomer Handphone /
+                      WA<span style="color: red;">*</span></label>
+                    <div class="col-sm-9">
+                      <input type="tel" name="inpWA" class="form-control input-tel" id="inpWA" pattern="[0-9]{12,13}"
+                        placeholder="cth: 08579919291" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inpUsername" class="col-sm-3 col-form-label" style="font-weight: bolder;">Username<span
+                        style="color: red;">*</span></label>
+                    <div class="col-sm-9">
+                      <input type="text" name="inpUsername" class="form-control input-text" id="inpUsername"
+                        placeholder="Username" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inpPassword" class="col-sm-3 col-form-label" style="font-weight: bolder;">Password<span
+                        style="color: red;">*</span></label>
+                    <div class="col-sm-9">
+                      <input type="password" name="inpPassword" class="form-control input-password" id="inpPassword"
+                        placeholder="Password" pattern="[A-Za-z0-9]{8,}"
+                        title="Kata sandi minimal 8 karakter, berisi huruf besar maupun kecil & angka" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inpEmail" class="col-sm-3 col-form-label" style="font-weight: bolder;">Email<span
+                        style="color: red;">*</span></label>
+                    <div class="col-sm-9">
+                      <input type="email" name="inpEmail" class="form-control input-email" id="inpEmail"
+                        placeholder="cth:example@gmail.com" required>
+                    </div>
+                  </div>
+                  <div class="form-group mb-2" style="margin-left: 80%;">
+                    <button type="reset" class="btn btn-light" style="border-radius: 33px;">Batal</button>
+                    <button type="submit" class="btn btn-primary" style="border-radius: 33px;">Simpan</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div> <!-- .container-fluid -->
+  </main> <!-- main -->
+  </div> <!-- .wrapper -->
+  <script src='js/config.js'></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/simplebar.min.js"></script>
+  <script src='js/daterangepicker.js'></script>
+  <script src='js/jquery.stickOnScroll.js'></script>
+  <script src="js/tinycolor-min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/d3.min.js"></script>
+  <script src="js/topojson.min.js"></script>
+  <script src="js/datamaps.all.min.js"></script>
+  <script src="js/datamaps-zoomto.js"></script>
+  <script src="js/datamaps.custom.js"></script>
+  <script src="js/Chart.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    /* defind global options */
+    Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
+    Chart.defaults.global.defaultFontColor = colors.mutedColor;
+  </script>
+  <script src="js/gauge.min.js"></script>
+  <script src="js/jquery.sparkline.min.js"></script>
+  <script src="js/apexcharts.min.js"></script>
+  <script src="js/apexcharts.custom.js"></script>
+  <script src='js/jquery.mask.min.js'></script>
+  <script src='js/select2.min.js'></script>
+  <script src='js/jquery.steps.min.js'></script>
+  <script src='js/jquery.validate.min.js'></script>
+  <script src='js/jquery.timepicker.js'></script>
+  <script src='js/dropzone.min.js'></script>
+  <script src='js/uppy.min.js'></script>
+  <script src='js/quill.min.js'></script>
+</body>
+
+</html>

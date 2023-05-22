@@ -7,32 +7,32 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="favicon.ico">
-  <title>Tiny Dashboard - A Bootstrap Dashboard Template</title>
+  <title>SIPSS | Log Aktivitas</title>
   <!-- Simple bar CSS -->
   <link rel="stylesheet" href="css/simplebar.css">
   <!-- Fonts CSS -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
   <!-- Icons CSS -->
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-  <link rel="stylesheet" href="fontawesome/css/fontawesome.css" />
-  <link rel="stylesheet" href="fontawesome/css/brands.css" />
-  <link rel="stylesheet" href="fontawesome/css/solid.css" />
-  <link rel="stylesheet" href="fontawesome/css/regular.css" />
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="fontawesome/css/solid.css">
+  <link rel="stylesheet" href="fontawesome/css/brands.css">
+  <link rel="stylesheet" href="fontawesome/css/regular.css">
   <link rel="stylesheet" href="css/feather.css">
 
-  <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
-  <link rel="stylesheet" href="css/dataTables.checkboxes.css">
   <!-- Date Range Picker CSS -->
   <link rel="stylesheet" href="css/daterangepicker.css">
   <!-- App CSS -->
   <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
-  <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app-dark.css" id="darkTheme" disabled>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 </head>
 
-<body class="vertical  light  ">
+<body class="vertical  light">
   <div class="wrapper">
     <nav class="topnav navbar fixed-top bg-white">
       <button type="button" class="navbar-toggler mt-2 p-0 mr-3 collapseSidebar">
@@ -105,13 +105,13 @@
               <span class="ml-3 item-text">Titik Lokasi</span>
             </a>
           </li>
-          <li class="nav-item w-100 active">
+          <li class="nav-item w-100">
             <a href="peta.html" class="nav-link">
               <span class="iconify" data-icon="material-symbols:map-outline-sharp" data-width="24"></span>
               <span class="ml-3 item-text">Peta</span>
             </a>
           </li>
-          <li class="nav-item w-100">
+          <li class="nav-item w-100 active">
             <a href="si-log-aktivitas.html" class="nav-link">
               <span class="iconify" data-icon="icon-park-outline:log" data-width="24"></span>
               <span class="ml-3 item-text">Log Aktivitas</span>
@@ -131,15 +131,70 @@
         </div>
       </nav>
     </aside>
-    <main role="main" class="main-content" style="margin-top: 65px;min-height:93vh;">
-      <div class="card bg-primary">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126723.1650406639!2d110.45105070399812!3d-6.997632538045172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4d3f0d024d%3A0x1e0432b9da5cb9f2!2sKota%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1684744038085!5m2!1sid!2sid"
-          style="border:0;width: 100%;height:90vh;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-      </div> <!-- .container-fluid -->
-    </main> <!-- main -->
+    <!-- sidebar end -->
+    <main role="main" class="main-content" style="margin-top: 65px;">
+      <div class="container-fluid">
+        <!-- table start -->
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row px-2 mb-3">
+                  <h3 class="col">Log Aktivitas</h3>
+                  <div class="col-5 mr-2">
+                    <div class="form-inline searchform-2">
+                      <input type="search" class="form-search bg-none mr-2" id="search_lokasi" name="search_lokasi"
+                        placeholder="Cari Data" aria-label="Search">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-5 ml-3 ">
+                    <label for="inpDaritanggal">Dari Tanggal</label>
+                    <input type="date" class="form-control" id="inpDaritanggal" name="inpDaritanggal">
+                  </div>
+                  <div class="col-5 ">
+                    <label for="inpSampaitanggal">Sampai Tanggal</label>
+                    <input type="date" class="form-control" id="inpSampaitanggal" value="inpSampaitanggal">
+                  </div>
+                  <div class="col align-self-end">
+                    <button type="button" class="btn btn-sm btn-primary"
+                      style="border-radius: 16px; font-size: 14px;">Terapkan Filter</button>
+                  </div>
+                </div>
+                <table class="table table-sm text-center dataTable-1 w-100">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>ID Jalan</th>
+                      <th class="text-left">Nama Jalan</th>
+                      <th class="text-left">Jenis Titik Lokasi</th>
+                      <th>Date Time Created</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                      </td>
+                      <td>443</td>
+                      <td class="text-left">Jl. Pemuda
+                      </td>
+                      <td class="text-left">Kode Lokasi</td>
+                      <td>10/09/2023</td>
+                      <td><span class="status-persetujuan approved">Aktif</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- table end  -->
+  </div> <!-- .container-fluid -->
+  </main> <!-- main -->
   </div> <!-- .wrapper -->
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -156,10 +211,9 @@
   <script src='js/dataTables.bootstrap4.min.js'></script>
   <script src='js/dataTables.checkboxes.min.js'></script>
   <script src='js/dataTables.buttons.min.js'></script>
-
   <script>
 
-    $('#dataTable-1').DataTable({
+    $('.dataTable-1').DataTable({
       dom: '<"top">t<"bottom bg-light rounded-2 d-flex justify-content-between align-items-center px-2"Bp <"px-1"l>><"clear">',
       paging: true,
       pagingType: "simple_numbers",
@@ -175,29 +229,17 @@
         'checkboxes': {
           'selectRow': true
         }
-      }, {
-        'targets': 12,
-        'orderable': false
       }
       ],
       buttons: [
         {
           text: '<i class="fa fa-trash"></i>&nbsp; Hapus',
           className: 'btn btn-sm rounded-2 btn-light'
-        },
-        {
-          text: '<i class="fa fa-trash"></i>&nbsp; Download ID Card',
-          className: 'btn btn-sm rounded-2 btn-light'
-        },
-        {
-          text: '<i class="fa fa-trash"></i>&nbsp; Download Dokumen Kontrak',
-          className: 'btn btn-sm rounded-2 btn-light'
         }
       ]
     });
 
   </script>
-
 </body>
 
 </html>

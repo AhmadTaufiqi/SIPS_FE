@@ -15,17 +15,13 @@
 		href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
 		rel="stylesheet">
 	<!-- Icons CSS -->
+	<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 	<link rel="stylesheet" href="fontawesome/css/fontawesome.css" />
 	<link rel="stylesheet" href="fontawesome/css/brands.css" />
 	<link rel="stylesheet" href="fontawesome/css/solid.css" />
 	<link rel="stylesheet" href="fontawesome/css/regular.css" />
 	<link rel="stylesheet" href="css/feather.css">
 
-	<!-- <link rel="stylesheet" href="css/dropzone.css"> -->
-	<!-- <link rel="stylesheet" href="css/uppy.min.css"> -->
-	<!-- <link rel="stylesheet" href="css/jquery.steps.css"> -->
-	<!-- <link rel="stylesheet" href="css/jquery.timepicker.css"> -->
-	<!-- <link rel="stylesheet" href="css/quill.snow.css"> -->
 	<link rel="stylesheet" href="css/dataTables.bootstrap4.css">
 	<link rel="stylesheet" href="css/dataTables.checkboxes.css">
 	<!-- Date Range Picker CSS -->
@@ -43,27 +39,11 @@
 				<i class="fe fe-menu navbar-toggler-icon"></i>
 			</button>
 			<ul class="nav ml-auto">
-				<!-- <li class="nav-item">
-            <a class="nav-link text-muted my-2" href="#" id="modeSwitcher" data-mode="light">
-              <i class="fe fe-sun fe-16"></i>
-            </a>
-          </li> -->
 				<li class="nav-item">
-					<a class="btn bg-light text-muted my-2 p-2" href="./#">
+					<a class="btn bg-light text-muted my-2 p-2" href="pengaturan.html">
 						<span class="fa fa-gear d-block"></span>
 					</a>
 				</li>
-				<!-- <li class="nav-item">
-          <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-shortcut">
-            <span class="fe fe-grid fe-16"></span>
-          </a>
-        </li>
-        <li class="nav-item nav-notif">
-          <a class="nav-link text-muted my-2" href="./#" data-toggle="modal" data-target=".modal-notif">
-            <span class="fe fe-bell fe-16"></span>
-            <span class="dot dot-md bg-success"></span>
-          </a>
-        </li> -->
 				<li class="nav-item">
 					<a class="nav-link text-muted pr-2" href="#" role="button">
 						<span class="avatar avatar-sm mt-2">
@@ -84,128 +64,70 @@
 						<img src="assets/images/logo.svg" alt="">
 					</a>
 				</div>
-				<ul class="navbar-nav flex-fill w-100 mb-2">
-					<li class="nav-item dropdown">
-						<a href="#dashboard" data-toggle="collapse" aria-expanded="false"
-							class="dropdown-toggle nav-link">
-							<i class="fe fe-home fe-16"></i>
-							<span class="ml-3 item-text">Dashboard</span><span class="sr-only">(current)</span>
-						</a>
-						<ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
-							<li class="nav-item active">
-								<a class="nav-link pl-3" href="./index.html"><span
-										class="ml-1 item-text">Default</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link pl-3" href="./dashboard-analytics.html"><span
-										class="ml-1 item-text">Analytics</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link pl-3" href="./dashboard-sales.html"><span
-										class="ml-1 item-text">E-commerce</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link pl-3" href="./dashboard-saas.html"><span class="ml-1 item-text">Saas
-										Dashboard</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link pl-3" href="./dashboard-system.html"><span
-										class="ml-1 item-text">Systems</span></a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<p class="text-muted nav-heading mt-4 mb-1">
-					<span>Components</span>
-				</p>
 				<ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
-					<li class="nav-item w-100 active">
-						<a class="nav-link" href="widgets.html">
-							<i class="fe fe-columns fe-16"></i>
+					<li class="nav-item w-100">
+						<a href="dashboard.html" class="nav-link">
+							<span class="iconify" data-icon="akar-icons:dashboard" data-rotate="90deg" data-width="24"></span>
 							<span class="ml-3 item-text">Dashboard</span>
 						</a>
 					</li>
 				</ul>
 				<ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
 					<li class="nav-item w-100">
-						<a class="nav-link" href="widgets.html">
-							<i class="fe fe-columns fe-16"></i>
+						<a href="si-kontrak-final.html" class="nav-link">
+							<span class="iconify" data-icon="material-symbols:edit-document-outline" data-width="24"></span>
 							<span class="ml-3 item-text">Kontrak Final</span>
 						</a>
 					</li>
 					<li class="nav-item w-100">
-						<a class="nav-link" href="widgets.html">
-							<i class="fe fe-check-square"></i>
+						<a class="nav-link" href="persetujuan.html">
+							<span class="iconify" data-icon="mdi:calendar-check" data-width="24"></span>
 							<span class="ml-3 item-text">Persetujuan</span>
 						</a>
 					</li>
 				</ul>
-				<ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
+				<ul class="navbar-nav flex-fill w-100 mb-2">
 					<li class="nav-item w-100">
-						<a class="nav-link" href="widgets.html">
-							<i class="fe fe-user"></i>
+						<a href="si-user-management.html" class="nav-link">
+							<span class="iconify" data-icon="ri:user-3-line" data-width="24"></span>
 							<span class="ml-3 item-text">User Management</span>
 						</a>
 					</li>
 					<li class="nav-item w-100">
-						<a class="nav-link" href="widgets.html">
-							<i class="fe fe-globe"></i>
+						<a href="si-jalan.html" class="nav-link">
+							<span class="iconify" data-icon="icon-park:world" data-width="24"></span>
 							<span class="ml-3 item-text">Jalan</span>
 						</a>
 					</li>
 					<li class="nav-item w-100">
-						<a class="nav-link" href="widgets.html">
-							<i class="fe fe-map-pin"></i>
+						<a href="titik_lokasi.html" class="nav-link">
+							<span class="iconify" data-icon="ri:map-pin-2-line" data-width="24"></span>
 							<span class="ml-3 item-text">Titik Lokasi</span>
 						</a>
 					</li>
 					<li class="nav-item w-100">
-						<a class="nav-link" href="widgets.html">
-							<i class="fe fe-map"></i>
+						<a href="peta.html" class="nav-link">
+							<span class="iconify" data-icon="material-symbols:map-outline-sharp" data-width="24"></span>
 							<span class="ml-3 item-text">Peta</span>
 						</a>
 					</li>
 					<li class="nav-item w-100">
-						<a class="nav-link" href="widgets.html">
-							<i class="fe fe-clipboard"></i>
-							<span class="ml-3 item-text">Log Aktifitas</span>
+						<a href="si-log-aktivitas.html" class="nav-link">
+							<span class="iconify" data-icon="icon-park-outline:log" data-width="24"></span>
+							<span class="ml-3 item-text">Log Aktivitas</span>
 						</a>
 					</li>
 					<li class="nav-item w-100">
-						<a class="nav-link" href="widgets.html">
-							<i class="fa-brands fa-whatsapp"></i>
+						<a href="si-wa-blast.html" class="nav-link">
+							<span class="iconify" data-icon="ic:baseline-whatsapp" data-width="24"></span>
 							<span class="ml-3 item-text">Whatsapp Blast</span>
 						</a>
 					</li>
 				</ul>
-				<!-- <ul class="navbar-nav flex-fill w-100 mb-2" style="border-bottom:solid 1px #e9e9e9">
-          <li class="nav-item dropdown">
-            <a href="#ui-elements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-              <i class="fe fe-box fe-16"></i>
-              <span class="ml-3 item-text">UI elements</span>
-            </a>
-            <ul class="collapse list-unstyled pl-4 w-100" id="ui-elements">
-              <li class="nav-item">
-                <a class="nav-link pl-3" href="./ui-color.html"><span class="ml-1 item-text">Colors</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pl-3" href="./ui-typograpy.html"><span class="ml-1 item-text">Typograpy</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pl-3" href="./ui-icons.html"><span class="ml-1 item-text">Icons</span></a>
-              </li>
-            </ul>
-          </li>
-        </ul> -->
-				<div class="btn-box w-100 mb-1 text-center" style="margin-top:110%;">
+				<div class="btn-box w-100 mb-1 text-center" style="margin-top:50%;">
 					<a href="" class="btn btn-light p-3 rounded-2">
 						<i class="fe fe-power fe-24"></i>
 					</a>
-					<!--  <a href="https://themeforest.net/item/tinydash-bootstrap-html-admin-dashboard-template/27511269"
-            target="_blank" class="btn mb-2 btn-primary btn-lg btn-block">
-            <i class="fe fe-shopping-cart fe-12 mx-2"></i><span class="small">Buy now</span>
-          </a> -->
 				</div>
 			</nav>
 		</aside>
@@ -227,8 +149,7 @@
 						<div class="tab-content" id="myTabContent">
 
 
-							<div class="tab-pane fade show active" id="profile" role="tabpanel"
-								aria-labelledby="home-tab">
+							<div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="home-tab">
 								<div class="row p-2">
 									<div class="col">
 										<h5>Personal Info</h5>
@@ -236,7 +157,8 @@
 										<h5>Your Level : Admin</h5>
 										<h5 class="my-3">Your Photo</h5>
 										<div class="avatar d-flex align-items-center mb-3">
-											<img src="https://demo-data-analisis.apikasi.fun/src/uploads/users/741965a7111c47ef504191df39585601.jpg"
+											<img
+												src="https://demo-data-analisis.apikasi.fun/src/uploads/users/741965a7111c47ef504191df39585601.jpg"
 												alt="..." class="avatar-img rounded-circle mx-2"
 												style="width: 100px; height: 100px; object-fit: cover; object-position: 100% 0; overflow:hidden;">
 											<div class="col">
@@ -312,8 +234,7 @@
 						<div class="modal-body pt-0">
 							<div class="row px-3 mb-2">
 								<div class="col-3">
-									<img src="./assets/avatars/face-1.jpg" alt="..." width="100"
-										class="avatar-img rounded-2">
+									<img src="./assets/avatars/face-1.jpg" alt="..." width="100" class="avatar-img rounded-2">
 								</div>
 								<div class="col">
 									<div class="d-flex">
@@ -414,44 +335,6 @@
 				$(this).children('i').attr('class', 'fe fe-eye')
 			}
 		})
-
-		$('#dataTable-1').DataTable({
-			dom: '<"top">t<"bottom bg-light rounded-2 d-flex justify-content-between align-items-center px-2"Bp <"px-1"l>><"clear">',
-			paging: true,
-			pagingType: "simple_numbers",
-			ordering: true,
-			info: false,
-			"order": [[1, 'asc']],
-			"lengthMenu": [
-				[3, 5, 10, -1],
-				[3, 5, 10, "All"]
-			],
-			'columnDefs': [{
-				'targets': 0,
-				'checkboxes': {
-					'selectRow': true
-				}
-			}, {
-				'targets': 12,
-				'orderable': false
-			}
-			],
-			buttons: [
-				{
-					text: '<i class="fa fa-trash"></i>&nbsp; Hapus',
-					className: 'btn btn-sm rounded-2 btn-light'
-				},
-				{
-					text: '<i class="fa fa-trash"></i>&nbsp; Download ID Card',
-					className: 'btn btn-sm rounded-2 btn-light'
-				},
-				{
-					text: '<i class="fa fa-trash"></i>&nbsp; Download Dokumen Kontrak',
-					className: 'btn btn-sm rounded-2 btn-light'
-				}
-			]
-		});
-
 	</script>
 
 </body>
