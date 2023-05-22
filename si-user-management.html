@@ -34,12 +34,43 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="vertical  light">
+<body class="vertical light">
   <div class="wrapper">
     <nav class="topnav navbar fixed-top bg-white">
       <button type="button" class="navbar-toggler mt-2 p-0 mr-3 collapseSidebar">
         <i class="fe fe-menu navbar-toggler-icon"></i>
       </button>
+      <div class="navbar-style">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="super-admin-tab" data-toggle="tab" href="#superadmin" role="tab"
+              aria-controls="superadmin" aria-selected="true">Super Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="user-admin-tab" data-toggle="tab" href="#useradmin" role="tab"
+              aria-controls="useradmin" aria-selected="true">User Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " id="juru-pungut-tab" data-toggle="tab" href="#jurupungut" role="tab"
+              aria-controls="jurupungut" aria-selected="true">Juru Pungut</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " id="juru-parkir-tab" data-toggle="tab" href="#juruparkir" role="tab"
+              aria-controls="juruparkir" aria-selected="true">Juru Parkir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " id="asisten-jukir-tab" data-toggle="tab" href="#asistenjukir" role="tab"
+              aria-controls="asistenjukir" aria-selected="true">Asisten Juru Parkir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " id="tamu-tab" data-toggle="tab" href="#tamu" role="tab" aria-controls="tamu"
+              aria-selected="true">Tamu</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card brand-label"
+        style="height: 53px; border-radius: 16px; border: none; background-color:  #E7E7E7;">
+      </div>
       <ul class="nav ml-auto">
         <li class="nav-item">
           <a class="btn bg-light text-muted my-2 p-2" href="pengaturan.html">
