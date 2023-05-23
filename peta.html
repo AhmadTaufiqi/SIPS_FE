@@ -38,6 +38,18 @@
       <button type="button" class="navbar-toggler mt-2 p-0 mr-3 collapseSidebar">
         <i class="fe fe-menu navbar-toggler-icon"></i>
       </button>
+      <div class="form-inline searchform-2 w-25">
+        <input type="search" class="form-search bg-none mr-2" id="search_lokasi" name="search_lokasi"
+          aria-label="Search" placeholder="Cari Lokasi">
+      </div>
+      <select name="filter_status" id="filter_status" class="form-control form-control-sm rounded-2 w-25">
+        <option value="aktif">Tampilkan Semua Status</option>
+        <option value="aktif">Aktif <span class="text-muted">=< 2 Tahun</span>
+        </option>
+        <option value="tidak aktif">Tidak Aktif</option>
+        <option value="1 bulan">Masa Kontrak Akan Berakhir<span class="text-muted">(Dalam 1 Bulan)</span>
+        </option>
+      </select>
       <ul class="nav ml-auto">
         <li class="nav-item">
           <a class="btn bg-light text-muted my-2 p-2" href="pengaturan.html">

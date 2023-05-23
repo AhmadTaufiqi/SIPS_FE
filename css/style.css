@@ -146,15 +146,22 @@ body {
 }
 
 .bg-purple {
-	background-color: #af1bcc;
+	background-color: #cc1bf1!important;
 }
 
 .text-purple {
-	color: #af1bcc;
+	color: #cc1bf1!important;
+}
+
+.bg-pink {
+	background-color: #ff6e99!important;
+}
+.text-pink {
+	color: #ff6e99;
 }
 
 .bg-green {
-	background-color: #18d190;
+	background-color: #18d190!important;
 }
 
 .text-green {
@@ -457,20 +464,30 @@ table.dataTable thead>tr>td.sorting {
 .select2-container--bootstrap4 .select2-selection {
 	border-radius: .7rem;
 }
-.select2-container--bootstrap4{
-	width: 100%!important;
+
+.select2-container--bootstrap4 {
+	width: 100% !important;
 }
 
-.vertnav .nav-item{
+.vertnav .nav-item {
 	padding: 10px 1px;
 }
-.nav-item.active{
+
+.nav-item.active {
 	background-color: #0067FF;
 	border-radius: 15px;
 }
-.nav-item.active .nav-link{
-	color: white!important;
+
+.nav-item.active .nav-link {
+	color: white !important;
 }
+
+.spacer-widget {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 /* KIPLI */
 /* .maps-section img{
         height: inherit;
