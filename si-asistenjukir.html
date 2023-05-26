@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="favicon.ico">
-  <title>SIPSS | Tambah User Asisten Juru Parkir</title>
+  <title>SIPSS | Asisten Juru Parkir</title>
   <!-- Simple bar CSS -->
   <link rel="stylesheet" href="css/simplebar.css">
   <!-- Fonts CSS -->
@@ -77,7 +77,7 @@
           </li>
         </ul>
         <ul class="navbar-nav flex-fill w-100 mb-2">
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a href="si-kontrak-final.html" class="nav-link">
               <span class="iconify" data-icon="material-symbols:edit-document-outline" data-width="24"></span>
               <span class="ml-3 item-text">Kontrak Final</span>
@@ -89,7 +89,7 @@
               <span class="ml-3 item-text">Persetujuan</span>
             </a>
           </li>
-          <li class="nav-item w-100 active">
+          <li class="nav-item w-100">
             <a href="si-user-management.html" class="nav-link">
               <span class="iconify" data-icon="ri:user-3-line" data-width="24"></span>
               <span class="ml-3 item-text">User Management</span>
@@ -139,123 +139,81 @@
         <div class="col-lg-12">
           <div class="card" style="margin-top: 10%;">
             <div class="card-body">
-              <h3 class="card-tittle">Tambah User Asisten Juru Parkir</h3>
-              <div class="col-12">
-                <label for="form-group" style="font-weight: bolder;">Upload Foto Profile</label>
-                <div class="profile-pic-div">
-                  <img src="assets/images/image.png" id="photo">
-                  <input type="file" id="file" max="2000" onchange="checkImageResolution()" accept=".jpg,.jpeg,.png"
-                    required>
-                  <label for="file" id="uploadBtn">Pilih Foto</label>
+              <h3 class="card-tittle">Asisten Juru Parkir</h3>
+              <div class="row">
+                <div class="col">
+                  <table class="table ">
+                    <thead class="table-info">
+                      <tr>
+                        <td>Nama Asisten</td>
+                        <td>Hari Kerja</td>
+                        <td>Jam Kerja</td>
+                        <td>Tagihan</td>
+                        <td>Action</td>
+                      </tr>
+                    <tbody>
+                      <tr>
+                        <td>Satrio Adib</td>
+                        <td>SEN, SEL, RAB, KAM, JUM, SAB</td>
+                        <td>08:00 - 20:00</td>
+                        <td>100.000</td>
+                        <td>
+                          <a class="btn btn-sm" href="#" data-toggle="modal" data-target="#hapusModal1">
+                            <span class="iconify mr-2" data-icon="fluent:delete-48-regular" data-width="20px"
+                              color="#0067FF"></span></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Satrio Adib</td>
+                        <td>SEN, SEL, RAB, KAM, JUM, SAB</td>
+                        <td>08:00 - 20:00</td>
+                        <td>100.000</td>
+                        <td>
+                          <button class="btn btn-sm" type="button" data-toggle="modal" data-target="#hapusModal1">
+                            <span class="iconify mr-2" data-icon="fluent:delete-48-regular" data-width="20px"
+                              color="#0067FF"></span></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                    </thead>
+                  </table>
                 </div>
               </div>
-              <ul class="mt-4 mr-3" style="font-size: 12px;">
-                <li>Resolution max 800 x 600</li>
-                <li>Maks. ukuran file 2.0 mb</li>
-                <li>Format foto yang diizinkan: JPG, JPEG, PNG</li>
-              </ul>
-
-              <div class="col-12">
-                <div class="row">
-                  <div class="col-6 ml-0">
-                    <form id="form1">
-                      <div class="form-group row">
-                        <label for="inpNama" class="col-sm-3 col-form-label" style="font-weight: bolder;">Nama Lengkap
-                          <span style="color: red;">*</span></label>
-                        <div class="col-sm-8">
-                          <input type="text" name="inpNama" class="form-control input-text rounded-15" id="inpNama" placeholder="Nama Lengkap"
-                            required>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inpUsername" class="col-sm-3 col-form-label"
-                          style="font-weight: bolder;">Username<span style="color: red;">*</span></label>
-                        <div class="col-sm-8">
-                          <input type="text" name="inpUsername" class="form-control input-text rounded-15" id="inpUsername"
-                            placeholder="Username" required>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inpWA" class="col-sm-3 col-form-label" style="font-weight: bolder;">No Handphone /
-                          WA<span style="color: red;">*</span></label>
-                        <div class="col-sm-8">
-                          <input type="tel" name="inpWA" class="form-control input-tel rounded-15" id="inpWA" pattern="[0-9]{12,13}"
-                            placeholder="cth: 08579919291" required>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inpJeniskartu" class="col-sm-3 col-form-label" style="font-weight: bolder;">Jenis
-                          Kartu Pengenal</label>
-                        <div class="col-sm-8">
-                          <select class="form-control rounded-15" id="inpJeniskartu" name="inpJeniskartu"
-                            style="padding-left: 30px; width: 100%; height: 32px;" required>
-                            <option></option>
-                            <option>KTP</option>
-                            <option>SIM</option>
-                            <option>Pasport</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inpUpload" class="col-sm-3 col-form-label" style="font-weight: bolder;">Upload Pas
-                          Foto<span style="color: red;">*</span></label>
-                        <div class="col-sm-12 mt-0" style="font-size: 12px;">
-                          <ul>
-                            <li>Resolution max 800 x 600</li>
-                            <li>Maks. ukuran file 2.0 mb</li>
-                            <li>Format foto yang diizinkan: JPG, JPEG, PNG</li>
-                          </ul>
-                        </div>
-                        <div class="col-8 ml-3">
-                          <div id="drag-drop-area"></div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="col-6">
-                    <form id="form1">
-                      <div class="form-group row">
-                        <label for="inpPassword" class="col-sm-4 col-form-label"
-                          style="font-weight: bolder;">Password<span style="color: red;">*</span></label>
-                        <div class="col-sm-8">
-                          <a role="button" class="password-show" data-show="0">
-                            <i class="fe fe-eye-off" aria-hidden="true"></i>
-                          </a>
-                          <input type="password" name="inpPassword" class="form-control input-password rounded-15" id="inpPassword"
-                            placeholder="Password" pattern="[A-Za-z0-9]{8,}"
-                            title="Kata sandi minimal 8 karakter, berisi huruf besar maupun kecil & angka" required>
-                          <span class="help-block">
-                            <small style="font-size: 10px; margin-left: 10px;">Kata sandi minimal 8 karakter, berisi
-                              huruf besar maupun kecil & angka</small>
-                          </span>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inpEmail" class="col-sm-4 col-form-label" style="font-weight: bolder;">Email<span
-                            style="color: red;">*</span></label>
-                        <div class="col-sm-8">
-                          <input type="email" name="inpEmail" class="form-control input-email rounded-15" id="inpEmail"
-                            placeholder="cth:example@gmail.com" required>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inpPengenal" class="col-sm-4 col-form-label" style="font-weight: bolder;">No Kartu
-                          Pengenal<span style="color: red;">*</span></label>
-                        <div class="col-sm-8">
-                          <input type="text" name="inpEmail" class="form-control input-text rounded-15" id="inpPengenal" required>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="form-group mb-2" style="margin-left: 80%;">
-                    <button type="reset" form="form1" class="btn btn-light" style="border-radius: 33px;">Batal</button>
-                    <button type="submit" form="form1" class="btn btn-primary" style="border-radius: 33px;">Simpan</button>
-                  </div>
+              <div class="row">
+                <div class="col">
+                  <a href="si-tmbh-asistenjukir.html" type="button" class="btn btn-sm btn-primary"
+                    style="margin-left: 84%;"><span class="iconify" data-icon="material-symbols:add"
+                      data-width="20"></span>Tambah Aisisten</a>
+                </div>
+              </div>
+              <div class="form-group mb-2" style="margin-left: 84%; margin-top: 20%;">
+                <button type="reset" form="form1" class="btn btn-light" style="border-radius: 33px;">Batal</button>
+                <button type="submit" form="form1" class="btn btn-primary" style="border-radius: 33px;">Simpan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- modal hapus start -->
+        <div class="modal fade" id="hapusModal1" tabindex="-1" role="dialog" aria-labelledby="verticalModalTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-sm" role="document" style="border-radius: 50%;">
+            <div class="modal-content" style="border-radius: 16px; border: none;">
+              <div class="modal-body text-center">
+                <span class="iconify" data-icon="bi:exclamation-circle-fill" style="color: #fec857;"
+                  data-width="75"></span>
+                <h5 style="color: #fec857;">Yakin ingin menghapus?</h5>
+                <span class="strong">Data akan dihapus selamanya</span>
+                <div class="text-center mt-3">
+                  <button type="button" class="btn mb-2 btn-light " data-dismiss="modal"
+                    style="border-radius: 16px;">Batal</button>
+                  <button type="button" class="btn mb-2 btn-primary" style="border-radius: 16px;"
+                    data-bs-target="#hapusModal2" data-bs-toggle="modal" data-bs-dismiss="modal">Hapus</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- modal hapus end -->
       </div>
   </div> <!-- .container-fluid -->
   </main> <!-- main -->
@@ -276,8 +234,12 @@
   <script src="js/datamaps-zoomto.js"></script>
   <script src="js/datamaps.custom.js"></script>
   <script src="js/Chart.min.js"></script>
-  <script src="js/apps.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    /* defind global options */
+    Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
+    Chart.defaults.global.defaultFontColor = colors.mutedColor;
+  </script>
   <script src="js/gauge.min.js"></script>
   <script src="js/jquery.sparkline.min.js"></script>
   <script src="js/apexcharts.min.js"></script>
@@ -290,21 +252,6 @@
   <script src='js/dropzone.min.js'></script>
   <script src='js/uppy.min.js'></script>
   <script src='js/quill.min.js'></script>
-  <script src='js/config.js'></script>
-  <script>
-		$('.password-show').on('click', function () {
-			if ($(this).attr('data-show') == 1) {
-				$(this).attr('data-show', '0')
-				$(this).siblings('input:first').attr("type", 'password')
-				$(this).children('i').attr('class', 'fe fe-eye-off')
-			} else {
-				$(this).attr('data-show', '1')
-				$(this).siblings('input:first').attr("type", 'text')
-				$(this).children('i').attr('class', 'fe fe-eye')
-			}
-		})
-	</script>
-
 </body>
 
 </html>

@@ -315,7 +315,7 @@
                   </div>
                   <div class="col-0">
                     <a href="si-create-kontrak.html" type="button" class="btn btn-sm mb-2 btn-primary"
-                      style="border-radius: 16px;">
+                      style="border-radius: 15px;">
                       <span class="iconify" data-icon="carbon:document-add" data-width="20"
                         data-flip="horizontal"></span>Tambah Kontrak</a>
                   </div>
@@ -329,7 +329,7 @@
                 <div class="row px-2 mb-2">
                   <!-- <div class="form-group"> -->
                   <div class="col">
-                    <label for="">Tipe Jukir</label>
+                    <label for="">Jenis Jukir</label>
                     <select name="tipe_jukir" id="" class="form-control form-control-sm">
                       <option value="umum">Umum</option>
                       <option value="swasta">Swasta</option>
@@ -370,7 +370,7 @@
                       <th></th>
                       <th>ID Kontrak</th>
                       <th class="text-left">Nama Lengkap</th>
-                      <th class="text-left">Tipe Jukir</th>
+                      <th class="text-left">Jenis Jukir</th>
                       <th>Periode</th>
                       <th>Tagihan</th>
                       <th>Perkiraan <i class="fa fa-circle-question r-0"></i></th>
@@ -406,43 +406,47 @@
                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <span class="text-muted sr-only">Action</span>
                         </button>
-                        <div class="dropdown-menu dropdown-menu-right" style="width: 500px;">
-                          <table class="table table-sm" style="width: 100%;">
-                            <thead>
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 600px;">
+                          <table class="table table-sm table-borderless" style="width: 100%;">
+                            <thead class="text-center">
                               <tr>
                                 <th>Lihat</th>
                                 <th>Edit</th>
                                 <th>Lainnya</th>
                               </tr>
                             </thead>
-                            <tbody>
+                            <tbody style="color: black;">
                               <tr>
                                 <td>
-                                  <a class="dropdown-item" href="#"><i
-                                      class="fe fe-file-text font-weight-bold"></i>Lihat
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#detail_kontrak"><span class="iconify mr-2" data-icon="ph:eye"
+                                      data-width="20"></span>Lihat
                                     Detail Kontrak</a>
                                 </td>
                                 <td>
-                                  <a class="dropdown-item" href="#"><i
-                                      class="fe fe-check-square font-weight-bold"></i>Edit Kontrak</a>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2" data-icon="fa:edit"
+                                      data-width="20"></span>Edit Kontrak</a>
                                 </td>
                                 <td>
-                                  <a class="dropdown-item" href="#"><i
-                                      class="fe fe-check-square font-weight-bold"></i>Tambah Asisten</a>
+                                  <a class="dropdown-item" href="si-asistenjukir.html"><span class="iconify mr-2"
+                                      data-icon="ant-design:usergroup-add-outlined" data-width="20"></span>Tambah
+                                    Asisten</a>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
-                                  <a class="dropdown-item" href="#"><i
-                                      class="fe fe-file-text font-weight-bold"></i>Lihat Lokasi</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#lihat_lokasi"><span class="iconify mr-2"
+                                      data-icon="fluent:my-location-20-regular" data-width="20"></span>Lihat Lokasi</a>
                                 </td>
                                 <td>
-                                  <a class="dropdown-item" href="#"><i
-                                      class="fe fe-check-square font-weight-bold"></i>Perpanjang Kontrak</a>
+                                  <a class="dropdown-item" href="si-create-kontrak.html"><span class="iconify mr-2"
+                                      data-icon="fluent:document-add-20-regular" data-width="20"></span>Perpanjang
+                                    Kontrak</a>
                                 </td>
                                 <td>
-                                  <a class="dropdown-item" href="#"><i
-                                      class="fe fe-check-square font-weight-bold"></i>Download Dokumen</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#download_dokumen"><span class="iconify mr-2"
+                                      data-icon="carbon:document-download" data-width="20"></span>Download Dokumen1</a>
                                 </td>
                               </tr>
                               <tr>
@@ -453,8 +457,9 @@
 
                                 </td>
                                 <td>
-                                  <a class="dropdown-item" href="#"><i
-                                      class="fe fe-check-square font-weight-bold"></i>Download ID Card</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#download_idcard"><span class="iconify mr-2"
+                                      data-icon="icon-park-outline:id-card-v" data-width="20"></span>Download ID
+                                    Card</a>
                                 </td>
                               </tr>
                               <tr>
@@ -463,32 +468,13 @@
                                 <td>
                                 </td>
                                 <td>
-                                  <a class="dropdown-item" href="#"><i
-                                      class="fe fe-check-square font-weight-bold"></i>Hapus</a>
+                                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#hapusModal1"><span
+                                      class="iconify mr-2" data-icon="fluent:delete-48-regular"
+                                      data-width="20"></span>Hapus</a>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
-                          <!-- <div class="row">
-                            <div class="col-4">
-
-                            </div>
-                            <div class="col-4">
-                              <a class="dropdown-item" href="#"><i class="fe fe-file-text font-weight-bold"></i>Edit
-                                Kontrak</a>
-                              <a class="dropdown-item" href="#"><i
-                                  class="fe fe-check-square font-weight-bold"></i>Perpanjang Kontrak</a>
-                            </div>
-                            <div class="col-4">
-                              <a class="dropdown-item" href="#"><i class="fe fe-file-text font-weight-bold"></i>Tambah
-                                Asisten</a>
-                              <a class="dropdown-item" href="#"><i
-                                  class="fe fe-check-square font-weight-bold"></i>Download Dokumen</a>
-                              <a class="dropdown-item" href="#"><i class="fe fe-x-square font-weight-bold"></i>Download
-                                ID Card</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-edit font-weight-bold"></i>Hapus</a>
-                            </div>
-                          </div> -->
                         </div>
                       </td>
                     </tr>
@@ -513,30 +499,75 @@
                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <span class="text-muted sr-only">Action</span>
                         </button>
-                        <div class="dropdown-menu dropdown-menu-right" style="width: 500px;">
-                          <div class="row">
-                            <div class="col-4">
-                              <a class="dropdown-item" href="#"><i class="fe fe-file-text font-weight-bold"></i>Lihat
-                                Detail Kontrak</a>
-                              <a class="dropdown-item" href="#"><i class="fe fe-check-square font-weight-bold"></i>Lihat
-                                Lokasi di Peta</a>
-                            </div>
-                            <div class="col-4">
-                              <a class="dropdown-item" href="#"><i class="fe fe-file-text font-weight-bold"></i>Edit
-                                Kontrak</a>
-                              <a class="dropdown-item" href="#"><i
-                                  class="fe fe-check-square font-weight-bold"></i>Perpanjang Kontrak</a>
-                            </div>
-                            <div class="col-3">
-                              <a class="dropdown-item" href="#"><i class="fe fe-file-text font-weight-bold"></i>Tambah
-                                Asisten</a>
-                              <a class="dropdown-item" href="#"><i
-                                  class="fe fe-check-square font-weight-bold"></i>Download Dokumen</a>
-                              <a class="dropdown-item" href="#"><i class="fe fe-x-square font-weight-bold"></i>Download
-                                ID Card</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-edit font-weight-bold"></i>Hapus</a>
-                            </div>
-                          </div>
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 600px;">
+                          <table class="table table-sm table-borderless" style="width: 100%;">
+                            <thead class="text-center">
+                              <tr>
+                                <th>Lihat</th>
+                                <th>Edit</th>
+                                <th>Lainnya</th>
+                              </tr>
+                            </thead>
+                            <tbody style="color: black;">
+                              <tr>
+                                <td>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#detail_kontrak"><span class="iconify mr-2" data-icon="ph:eye"
+                                      data-width="20"></span>Lihat
+                                    Detail Kontrak</a>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2" data-icon="fa:edit"
+                                      data-width="20"></span>Edit Kontrak</a>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2"
+                                      data-icon="ant-design:usergroup-add-outlined" data-width="20"></span>Tambah
+                                    Asisten</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#lihat_lokasi"><span class="iconify mr-2"
+                                      data-icon="fluent:my-location-20-regular" data-width="20"></span>Lihat Lokasi</a>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="si-create-kontrak.html"><span class="iconify mr-2"
+                                      data-icon="fluent:document-add-20-regular" data-width="20"></span>Perpanjang
+                                    Kontrak</a>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2"
+                                      data-icon="carbon:document-download" data-width="20"></span>Download Dokumen</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2"
+                                      data-icon="icon-park-outline:id-card-v" data-width="20"></span>Download ID
+                                    Card</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#hapusModal1"><span
+                                      class="iconify mr-2" data-icon="icon-park-outline:id-card-v"
+                                      data-width="20"></span>Hapus</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </td>
                     </tr>
@@ -562,30 +593,73 @@
                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <span class="text-muted sr-only">Action</span>
                         </button>
-                        <div class="dropdown-menu dropdown-menu-right" style="width: 500px;">
-                          <div class="row">
-                            <div class="col-4">
-                              <a class="dropdown-item" href="#"><i class="fe fe-file-text font-weight-bold"></i>Lihat
-                                Detail Kontrak</a>
-                              <a class="dropdown-item" href="#"><i class="fe fe-check-square font-weight-bold"></i>Lihat
-                                Lokasi di Peta</a>
-                            </div>
-                            <div class="col-4">
-                              <a class="dropdown-item" href="#"><i class="fe fe-file-text font-weight-bold"></i>Edit
-                                Kontrak</a>
-                              <a class="dropdown-item" href="#"><i
-                                  class="fe fe-check-square font-weight-bold"></i>Perpanjang Kontrak</a>
-                            </div>
-                            <div class="col-3">
-                              <a class="dropdown-item" href="#"><i class="fe fe-file-text font-weight-bold"></i>Tambah
-                                Asisten</a>
-                              <a class="dropdown-item" href="#"><i
-                                  class="fe fe-check-square font-weight-bold"></i>Download Dokumen</a>
-                              <a class="dropdown-item" href="#"><i class="fe fe-x-square font-weight-bold"></i>Download
-                                ID Card</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-edit font-weight-bold"></i>Hapus</a>
-                            </div>
-                          </div>
+                        <div class="dropdown-menu dropdown-menu-right" style="width: 600px;">
+                          <table class="table table-sm table-borderless" style="width: 100%;">
+                            <thead class="text-center">
+                              <tr>
+                                <th>Lihat</th>
+                                <th>Edit</th>
+                                <th>Lainnya</th>
+                              </tr>
+                            </thead>
+                            <tbody style="color: black;">
+                              <tr>
+                                <td>
+                                  <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#detail_kontrak"><span class="iconify mr-2" data-icon="ph:eye"
+                                      data-width="20"></span>Lihat Detail Kontrak</a>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2" data-icon="fa:edit"
+                                      data-width="20"></span>Edit Kontrak</a>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2"
+                                      data-icon="ant-design:usergroup-add-outlined" data-width="20"></span>Tambah
+                                    Asisten</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2"
+                                      data-icon="fluent:my-location-20-regular" data-width="20"></span>Lihat Lokasi</a>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="si-create-kontrak.html"><span class="iconify mr-2"
+                                      data-icon="fluent:document-add-20-regular" data-width="20"></span>Perpanjang
+                                    Kontrak</a>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2"
+                                      data-icon="carbon:document-download" data-width="20"></span>Download Dokumen</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#"><span class="iconify mr-2"
+                                      data-icon="icon-park-outline:id-card-v" data-width="20"></span>Download ID
+                                    Card</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#hapusModal1"><span
+                                      class="iconify mr-2" data-icon="icon-park-outline:id-card-v"
+                                      data-width="20"></span>Hapus</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </td>
                     </tr>
@@ -597,7 +671,289 @@
         </div>
         <!-- table end  -->
       </div> <!-- .container-fluid -->
-      <!-- modal start -->
+
+      <!-- modal detail kontrak start -->
+      <div class="modal fade" id="detail_kontrak" tabindex="-1" role="dialog" aria-labelledby="verticalModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-header align-items-center">
+              <h4 class="modal-title" id="verticalModalTitle"> <span class="iconify mr-2"
+                  data-icon="material-symbols:edit-document-outline" style="color: #0067ff;"
+                  data-width="25"></span>Detail Kontrak</h4>
+              <button type="button" class="btn bg-light p-1" data-dismiss="modal">
+                <span class="fe fe-x" aria-hidden="true" style="font-size:21px;"></span>
+              </button>
+            </div>
+            <div class="modal-body pt-0">
+              <div class="row px-3 mb-2">
+                <div class="col">
+                  <span style="font-size:16px;">Detail Lokasi</span>
+                </div>
+                <div class="col">
+                  <span style="font-size:16px;">Detail Kontrak</span>
+                </div>
+              </div>
+              <hr class="my-2">
+              <div class="row px-3">
+                <div class="col">
+                  <div class="detail-profil">
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Nama Jalan</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Jl. Pemuda Raya</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Kode Lokasi</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>309039</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Longitude</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>-019290289</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Longitudinal</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>55929921231<span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2 align-items-center">
+                      <div class="col">
+                        <div class="lokasi-modal mb-2"
+                          style="background-color: grey; height: 60vh;border-radius: 20px;overflow: hidden;">
+                          <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126723.1650406639!2d110.45105070399812!3d-6.997632538045172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4d3f0d024d%3A0x1e0432b9da5cb9f2!2sKota%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1684744038085!5m2!1sid!2sid"
+                            style="border:0;width: 100%;height:90vh;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="detail-profil">
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">ID Kontrak</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>3324019281982900</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Masa Kontrak</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>08/09/2022 - 08/09/2023</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Status Kontrak</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Baru</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Jenis Jukir</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Umum - Elektronik<span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Hari Kerja</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Senin, Selasa, Rabu, Kamis, Jumat, Sabtu<span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Periode</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Bulanan<span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Tanggal Tagihan</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Per tanggal 09<span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Tagihan</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Rp. 100.000<span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Perkiraan</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Rp. 150.000<span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Perkiraan Dalam Setahun</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Rp.1.000.000<span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row px-3 mt-2">
+                    <div class="col">
+                      <span style="font-size:16px;">Data Juru Parkir</span>
+                    </div>
+                  </div>
+                  <hr class="my-2">
+                  <div class="row px-3">
+                    <div class="col">
+                      <img src="./assets/avatars/face-1.jpg" alt="..." width="100" class="avatar-img rounded-2">
+                    </div>
+                    <div class="detail-profil" style="margin-right: 20%;">
+                      <div class="d-flex py-2">
+                        <div class="col">
+                          <span class="text-muted">Nama Lengkap</span>
+                        </div>
+                        <div class="col text-right">
+                          <span>Satrio Adib</span>
+                        </div>
+                      </div>
+                      <div class="d-flex py-2">
+                        <div class="col">
+                          <span class="text-muted">No. Handphone</span>
+                        </div>
+                        <div class="col text-right">
+                          <span>089323781111</span>
+                        </div>
+                      </div>
+                      <div class="d-flex py-2">
+                        <div class="col">
+                          <span class="text-muted">Jenis Kartu Pengenal</span>
+                        </div>
+                        <div class="col text-right">
+                          <span>KTP<span>
+                        </div>
+                      </div>
+                      <div class="d-flex py-2 align-items-center">
+                        <div class="col">
+                          <span class="text-muted">Foto Kartu Pengenal</span>
+                        </div>
+                        <div class="col text-right">
+                          <div class="kartu-pengenal">
+                            <img src="assets/images/kartu_pengenal.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal detail kontrak end -->
+
+      <!-- modal lihat lokasi start -->
+      <div class="modal fade" id="lihat_lokasi" tabindex="-1" role="dialog" aria-labelledby="verticalModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header align-items-center">
+              <h4 class="modal-title" id="verticalModalTitle">Kedungmudu Raya 10.04</h4>
+              <button type="button" class="btn bg-light p-1" data-dismiss="modal">
+                <span class="fe fe-x" aria-hidden="true" style="font-size:21px;"></span>
+              </button>
+            </div>
+            <div class="modal-body pt-0">
+              <div class="col">
+                <div class="row px-2 mb-2">
+                  <h6>Titik Lokasi Parkir</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="detail-profil">
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Nama Jalan</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>Jl. Kedungmudu Raya</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Kode Lokasi</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>2345</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Longitude</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>-8973422345</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2">
+                      <div class="col">
+                        <span class="text-muted">Longitudinal</span>
+                      </div>
+                      <div class="col text-right">
+                        <span>23459863724</span>
+                      </div>
+                    </div>
+                    <div class="d-flex py-2 align-items-center">
+                      <div class="col">
+                        <div class="lokasi-modal mb-2"
+                          style="background-color: grey; height: 60vh;border-radius: 20px;overflow: hidden;">
+                          <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126723.1650406639!2d110.45105070399812!3d-6.997632538045172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4d3f0d024d%3A0x1e0432b9da5cb9f2!2sKota%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1684744038085!5m2!1sid!2sid"
+                            style="border:0;width: 100%;height:90vh;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal lihat lokasi end -->
+
+      <!-- modal detail jukir start -->
       <div class="modal fade" id="detail_jukir" tabindex="-1" role="dialog" aria-labelledby="verticalModalTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -616,14 +972,14 @@
                 <div class="col">
                   <div class="d-flex">
                     <span class="name-title">Taufiky&nbsp;</span>
-                    <div class="btn btn-sm bg-active text-light mb-2">juru parkir</div>
+                    <div class="btn btn-sm bg-active text-light mb-2">Juru parkir</div>
                   </div>
                   <div class="d-flex mb-1">
-                    <span class="text-muted">last access&nbsp;</span>
+                    <span class="text-muted">Last access&nbsp;</span>
                     <span>2023-03-12, 10:19</span>
                   </div>
                   <div class="d-flex">
-                    <span class="text-muted">created&nbsp;</span>
+                    <span class="text-muted">Created&nbsp;</span>
                     <span>2023-03-12, 10:19</span>
                   </div>
                 </div>
@@ -682,7 +1038,133 @@
           </div>
         </div>
       </div>
-      <!-- modal end -->
+      <!-- modal detail jukir end -->
+
+      <!-- modal hapus start -->
+      <div class="modal fade" id="hapusModal1" tabindex="-1" role="dialog" aria-labelledby="verticalModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document" style="border-radius: 50%;">
+          <div class="modal-content" style="border-radius: 16px; border: none;">
+            <div class="modal-body text-center">
+              <span class="iconify" data-icon="bi:exclamation-circle-fill" style="color: #fec857;"
+                data-width="75"></span>
+              <h5 style="color: #fec857;">Yakin ingin menghapus?</h5>
+              <span class="strong">Data akan dihapus selamanya</span>
+              <div class="text-center mt-3">
+                <button type="button" class="btn mb-2 btn-light " data-dismiss="modal"
+                  style="border-radius: 16px;">Batal</button>
+                <button type="button" class="btn mb-2 btn-primary" style="border-radius: 16px;"
+                  data-bs-target="#hapusModal2" data-bs-toggle="modal" data-bs-dismiss="modal">Hapus</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal hapus end -->
+
+      <!-- modal download dokumen start -->
+      <div class="modal fade modal-bottom" id="download_dokumen" tabindex="-1" role="dialog" aria-labelledby="verticalModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content"  style="background-color: #EFEFEF;">
+            <div class="modal-header align-items-center">
+              <h4 class="modal-title" id="verticalModalTitle">Download Dokumen</h4>
+              <button type="button" class="btn bg-light p-1" data-dismiss="modal">
+                <span class="fe fe-x" aria-hidden="true" style="font-size:21px;"></span>
+              </button>
+            </div>
+            <div class="modal-body pt-0">
+              <div class="row px-3">
+                <div class="col">
+                  <iframe src="dok/laporan.pdf" width="100%" height="500px"></iframe>
+                </div>
+                <div class="col-3">
+                  <div class="card card-shadow">
+                    <div class="card-body">
+                      <div class="d-flex py-2" style="font-size: small;">
+                        <div class="col-8">
+                          <span class="text-dark">Created</span>
+                        </div>
+                        <div class="col">
+                          <span class="text-dark">:</span>
+                        </div>
+                        <div class="col-8 text-left">
+                          <span>09/12/2023</span>
+                        </div>
+                      </div>
+                      <div class="d-flex py-2">
+                        <div class="col-8">
+                          <span class="text-dark">Last Update</span>
+                        </div>
+                        <div class="col">
+                          <span class="text-dark">:</span>
+                        </div>
+                        <div class="col-8 text-left">
+                          <span>09/12/2023</span>
+                        </div>
+                      </div>
+                      <div class="d-flex py-2">
+                        <div class="col-8">
+                          <span class="text-dark">ID Kontrak</span>
+                        </div>
+                        <div class="col">
+                          <span class="text-dark">:</span>
+                        </div>
+                        <div class="col-8 text-left">
+                          <span>ID Kontrak</span>
+                        </div>
+                      </div>
+                      <div class="d-flex py-2">
+                        <div class="col-8">
+                          <span class="text-dark">Nama Jukir</span>
+                        </div>
+                        <div class="col">
+                          <span class="text-dark">:</span>
+                        </div>
+                        <div class="col-8 text-left">
+                          <span>Punidi</span>
+                        </div>
+                      </div>
+                      <div class="d-flex py-2">
+                        <div class="col-8">
+                          <span class="text-dark">Total Asisten</span>
+                        </div>
+                        <div class="col">
+                          <span class="text-dark">:</span>
+                        </div>
+                        <div class="col-8 text-left">
+                          <span>2</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-block btn-sm btn-primary rounded-15">Download PDF<span class="iconify ml-2" data-icon="teenyicons:pdf-outline" data-width="16"></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal download dokumen end -->
+
+      <!-- modal download idcard start -->
+      <div class="modal fade modal-bottom" id="download_idcard" tabindex="-1" role="dialog" aria-labelledby="verticalModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content"  style="background-color: #EFEFEF;">
+            <div class="modal-header align-items-center">
+              <h4 class="modal-title" id="verticalModalTitle">ID Card</h4>
+              <button type="button" class="btn bg-light p-1" data-dismiss="modal">
+                <span class="fe fe-x" aria-hidden="true" style="font-size:21px;"></span>
+              </button>
+            </div>
+            <div class="modal-body pt-0">
+              <iframe src="id-card.html" frameborder="0" width="100%"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal download idcard end -->
     </main> <!-- main -->
   </div> <!-- .wrapper -->
   <script src="js/jquery.min.js"></script>
@@ -741,6 +1223,7 @@
     });
 
   </script>
+
 </body>
 
 </html>
