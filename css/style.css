@@ -487,6 +487,12 @@ table.dataTable thead>tr>td.sorting {
 	flex-direction: column;
 	justify-content: space-between;
 }
+.form-icon{
+	position: absolute;
+	padding: 10px;
+	font-size: 17px;
+	color: #5e5e5e;
+}
 
 /* KIPLI */
 /* .maps-section img{

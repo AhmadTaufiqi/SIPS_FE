@@ -27,41 +27,44 @@
 
 <body class="vertical light">
   <div class="wrapper">
-    <div class="d-flex align-items-center h-100">
-      <div class="col-lg-6">
+    <div class="d-flex" style="height:100vh;">
+      <div class="col-lg-6 d-flex flex-column justify-content-between p-3">
+        <div class="d-flex align-items-center">
+          <img class="mx-1" src="assets/images/semarang.png" alt="" height="50">
+          <img class="mx-1" src="assets/images/dishub.png" alt="" height="50">
+          <h3>Juru Parkir Management System</h3>
+        </div>
         <div class="w-50 mx-auto">
-          <form class="mx-auto text-center">
-            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
-              <svg version="1.1" id="logo" class="navbar-brand-img brand-md" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
-                <g>
-                  <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
-                  <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
-                  <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
-                </g>
-              </svg>
-            </a>
-            <h1 class="h6 mb-3">Sign in</h1>
+          <form class="mx-auto">
+            <h2>Sign In</h2>
             <div class="form-group">
-              <label for="inputEmail" class="sr-only">Email address</label>
-              <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Email address"
-                required="" autofocus="">
+              <label for="inputEmail">Username</label>
+              <div class="d-flex align-items-center">
+                <input type="email" id="inputEmail" class="form-control form-control-lg rounded-15"
+                  placeholder="Masukkan Username Anda" required="" autofocus="" style="padding-left:35px">
+                <i class="form-icon fe fe-user"></i>
+              </div>
             </div>
             <div class="form-group">
-              <label for="inputPassword" class="sr-only">Password</label>
-              <input type="password" id="inputPassword" class="form-control form-control-lg" placeholder="Password"
-                required="">
-            </div>
-            <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="remember-me"> Stay logged in </label>
+              <label for="inputPassword">Password</label>
+              <div class="d-flex align-items-center">
+                <input type="password" id="inputPassword" class="form-control form-control-lg rounded-15"
+                  placeholder="Password" required="" style="padding-left:35px">
+                <i class="form-icon fe fe-key"></i>
+                <a role="button" class="password-show" data-show="0" style="left:68%;right:unset;">
+                  <i class="fe fe-eye-off" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Let me in</button>
           </form>
         </div> <!-- .card -->
+        <div class="footer"><strong>2023 </strong><span>© All Right reserved. Fun Technology</span></div>
       </div>
-      <div class="col-lg-6 d-none d-lg-flex" style="background-image: url(assets/images/bg-login.png);height: 100vh;background-size: cover;">
+      <div class="col-lg-6 d-none d-lg-flex"
+        style="background-image: url(assets/images/bg-login.png);height: 100vh;background-size: cover;">
       </div>
+
     </div>
   </div> <!-- .wrapper -->
   <script src="js/jquery.min.js"></script>
@@ -70,7 +73,19 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/config.js"></script>
   <script src="js/apps.js"></script>
-
+  <script>
+    $('.password-show').on('click', function () {
+      if ($(this).attr('data-show') == 1) {
+        $(this).attr('data-show', '0')
+        $(this).siblings('input:first').attr("type", 'password')
+        $(this).children('i').attr('class', 'fe fe-eye-off')
+      } else {
+        $(this).attr('data-show', '1')
+        $(this).siblings('input:first').attr("type", 'text')
+        $(this).children('i').attr('class', 'fe fe-eye')
+      }
+    })
+  </script>
 </body>
 
 </html>
